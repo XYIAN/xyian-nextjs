@@ -2,7 +2,7 @@
 import { ProjectDisplay } from './components/ProjectDisplay';
 import { MenuModel } from '@/common/Menu/MenuModel';
 import { PROJECT_LIST } from './constants/projectList';
-// import ProjectList from './components/ProjectList';
+import ProjectList from './components/ProjectList';
 
 export default function ProjectGallery() {
     return (
@@ -14,9 +14,9 @@ export default function ProjectGallery() {
                     <ProjectDisplay projects={PROJECT_LIST} />
                 </div>
             </div>
-            {/* <div>
+            <div>
                 <ProjectList projects={PROJECT_LIST} />
-            </div> */}
+            </div>
         </main>
     );
 }
