@@ -1,9 +1,9 @@
 import { MemberDetail } from '@/types';
-// import Image from 'next/image';
 import { Image } from 'primereact/image';
 import { Card } from 'primereact/card';
 import '../../../styles/displayCard.scss';
 import '../../../styles/displayImage.scss';
+import '../../../styles/_teamPage.scss';
 interface PersonDisplayProps {
     memberDetails: MemberDetail;
 }

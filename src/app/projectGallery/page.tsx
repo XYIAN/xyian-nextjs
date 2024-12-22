@@ -1,6 +1,6 @@
 'use client';
 import { ProjectDisplay } from './components/ProjectDisplay';
-import { MenuModel } from '@/common/Menu/MenuModel';
+import { MenuModel } from '@/components';
 import { PROJECT_LIST } from '@/constants';
 import '../../styles/_gallery.scss';
 export default function ProjectGallery() {

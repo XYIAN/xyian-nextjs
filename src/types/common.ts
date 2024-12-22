@@ -6,3 +6,7 @@ export interface XYCard {
     description: string;
     url: string;
 }
+export interface MenuItem {
+    label: string;
+    route: string;
+}

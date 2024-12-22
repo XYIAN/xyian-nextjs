@@ -1,10 +1,10 @@
-import { MenuModel } from '@/common/Menu/MenuModel';
+import { MenuModel } from '@/components/menu/MenuModel';
 import { NextPage } from 'next';
-import { XYSToTop } from '@/common';
+import { XYSToTop } from '@/components';
 import LeftBulletPoints from './components/leftbulletpoints';
 import RightBulletPoints from './components/rightbulletpoints';
-import { ABOUT_US } from '../team/constants/ABOUT_US';
 import '../../styles/about/aboutStyles.scss';
+import { ABOUT_US } from '@/constants';
 
 interface Props {}
 

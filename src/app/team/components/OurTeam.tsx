@@ -1,6 +1,6 @@
 import React from 'react';
 import { PersonDisplay } from './PersonDisplay';
-import { TEAM_LIST } from '../constants/TEAM_LIST';
+import { TEAM_LIST } from '@/constants';
 
 const OurTeam = () => {
     return (

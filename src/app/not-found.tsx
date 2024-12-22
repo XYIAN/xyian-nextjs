@@ -2,9 +2,9 @@
 
 import React from 'react';
 import Image from 'next/image';
-import XYButton from '@/common/Inputs/XYButton';
+import XYButton from '@/components/inputs/XYButton';
 import { useRouter } from 'next/navigation';
-import { MainLinks } from '@/common/links/MainLinks';
+import { MainLinks } from '@/components';
 
 const NotFound = () => {
     const router = useRouter();

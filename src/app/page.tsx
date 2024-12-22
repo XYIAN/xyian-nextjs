@@ -1,8 +1,8 @@
 'use client';
 import Image from 'next/image';
-import { MainLinks } from '@/common/links/MainLinks';
+import { MainLinks } from '@/components/links/MainLinks';
 import '../styles/inputs/buttonHover.scss';
-import LoginLink from '@/common/links/LoginLink';
+import LoginLink from '@/components/links/LoginLink';
 const BOTTOM_PADDING = ` pb-4`;
 
 export default function Home() {
