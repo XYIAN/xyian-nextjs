@@ -7,9 +7,10 @@ export const ABOUT_US: AboutUsModel[] = [
         text: `At XYIAN Software, we're passionate about helping
         businesses—especially small businesses—unlock their
         potential through transformative digital solutions. `,
+        imageSrc : "/Primary.png"
     },
     {
-        id: 3,
+        id: 2,
         type: 'primary',
         text: `Founded
         with a vision to make innovative technology accessible and
@@ -27,9 +28,10 @@ export const ABOUT_US: AboutUsModel[] = [
         life can be daunting. We help our clients design, build,
         maintain, and scale their solutions—guiding them through the
         journey from concept to completion.`,
+        imageSrc : "/Primary.png"
     },
     {
-        id: 2,
+        id: 3,
         type: 'secondary',
         text: `Staying ahead of tech trends is essential to us, so we're
         always testing and integrating new, secure innovations to
@@ -42,6 +44,7 @@ export const ABOUT_US: AboutUsModel[] = [
         a team for a single project. Our mission is simple: to grow
         and reach more clients by demonstrating our commitment to
         excellence and our proven track record.`,
+        imageSrc : "/Primary.png"
     },
     {
         id: 4,
@@ -49,5 +52,6 @@ export const ABOUT_US: AboutUsModel[] = [
         text: `We’re here to be your trusted partner in building impactful
         software solutions that drive results. Let’s connect and see
         how we can help bring your ideas to life!`,
+        imageSrc : "/Primary.png"
     },
 ];

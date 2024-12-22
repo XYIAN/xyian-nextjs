@@ -38,6 +38,7 @@ export const MenuModel = () => {
                     top: '2rem',
                     right: '2rem',
                     padding: '5px',
+                    zIndex:999
                 }}
                 pt={{
                     root: {
