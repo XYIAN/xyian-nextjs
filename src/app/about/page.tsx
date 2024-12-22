@@ -6,6 +6,7 @@ import { XYSToTop } from '@/common';
 interface Props {}
 
 const AboutXYS: NextPage<Props> = ({}) => {
+    //TODO this page needs to look better and be easier to read + media
     return (
         <main className='p-6'>
             <MenuModel />
