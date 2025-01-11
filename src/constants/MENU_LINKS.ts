@@ -6,11 +6,10 @@ export const MENU_LINKS: MenuItem[] = [
         label: 'Our Team',
         route: 'team',
     },
-    {
-        label: 'Project Gallery',
-        route: 'projectGallery',
-    },
-
+    // {
+    //     label: 'Project Gallery',
+    //     route: 'projectGallery',
+    // },
     // {
     //     label: 'About XYS',
     //     route: 'about',
