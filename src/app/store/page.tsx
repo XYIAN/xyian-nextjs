@@ -1,16 +1,17 @@
 'use client';
-import React from 'react';
+import { STORE_ITEMS } from '@/constants';
+import { StoreDisplay } from '@/features';
+import { NextPage } from 'next';
 
-const Store = () => {
+interface Props {}
+
+export const Page: NextPage<Props> = ({}) => {
     return (
         <div className='pt-6'>
             <h1 className='p-2'>Xyian Apparel&trade;</h1>
-            <p>
-                Store inventory in rotation, please come back later as we update
-                our new 2025 line.{' '}
-            </p>
+            <StoreDisplay itemList={STORE_ITEMS} />
         </div>
     );
 };
 
-export default Store;
+export default Page;
