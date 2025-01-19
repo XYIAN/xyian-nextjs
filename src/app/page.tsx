@@ -11,10 +11,11 @@ export default function Home() {
     return (
         <main>
             <div
-                className='flex flex-column pt-6 justify-content-center text-center align-items-center gap-3 mainBody m-0'
+                className='flex flex-column justify-content-center text-center align-items-center gap-3 mainBody'
                 style={{
                     backgroundImage: `url(${backgroundImage})`,
                     padding: '0rem 2rem',
+                    marginTop: '15vh',
                 }}
             >
                 <Image
