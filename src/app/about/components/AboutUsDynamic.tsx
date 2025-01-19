@@ -11,7 +11,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 //style consts
-const BOTTOM_MARGIN: string = '0 0 30vh 0 !important';
+const BOTTOM_MARGIN: string = '0 0 35vh 0 !important';
 interface AboutUsProps {
     data: AboutUsModel[];
 }
