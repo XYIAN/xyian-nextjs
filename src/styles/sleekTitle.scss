@@ -5,9 +5,15 @@ $text-color: #ffffff;
 // Scoped styles for the title container
 .title-container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Centers horizontally
+    align-items: center; // Centers vertically
+    height: 100vh; // Takes up the full viewport height
     text-align: center;
     padding: 2rem 1rem;
     overflow: hidden;
+    margin: 0;
 
     // The animated line background
     &::before {

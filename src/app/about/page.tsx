@@ -14,7 +14,7 @@ interface Props {}
 
 const AboutXYS: NextPage<Props> = ({}) => {
     return (
-        <main className='p-6'>
+        <main>
             <AboutUsTitle />
             <div>
                 <AboutUsDynamic data={ABOUT_US_SPLIT} />
