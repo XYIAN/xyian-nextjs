@@ -10,11 +10,13 @@ import { AboutUsModel } from '@/types';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
+//style consts
+const BOTTOM_MARGIN: string = '0 0 30vh 0 !important';
 interface AboutUsProps {
     data: AboutUsModel[];
 }
 
-const AboutUsDynamic: React.FC<AboutUsProps> = ({ data }) => {
+export const AboutUsDynamic: React.FC<AboutUsProps> = ({ data }) => {
     const getComponentByIndex = (item: (typeof ABOUT_US)[0], index: number) => {
         const components = [
             <HeroSection key={item.id} data={item} />,
@@ -54,6 +56,7 @@ const HeroSection: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
                 color: '#fff',
                 borderRadius: '12px',
                 boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+                margin: BOTTOM_MARGIN,
             }}
         >
             <Image
@@ -68,13 +71,15 @@ const HeroSection: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
                 <h1 className='text-4xl font-bold mb-4'>{data.title}</h1>
             )}
             <p className='text-lg leading-relaxed'>{data.text}</p>
-            <Button
-                label='See Our Team'
-                icon='pi pi-arrow-right'
-                className='p-button-rounded p-button-outlined mt-5'
-                style={{ color: '#fff', borderColor: '#fff' }}
-                onClick={() => handleNavigateClick('team')}
-            />
+            {data.id === 1 && (
+                <Button
+                    label='See Our Team'
+                    icon='pi pi-arrow-right'
+                    className='p-button-rounded p-button-outlined mt-5'
+                    style={{ color: '#fff', borderColor: '#fff' }}
+                    onClick={() => handleNavigateClick('team')}
+                />
+            )}
         </div>
     );
 };
@@ -87,35 +92,37 @@ const SplitSection: React.FC<{
     return (
         <div
             className={classNames(
-                'split-section flex align-items-center py-6 px-4',
+                'split-section flex align-items-center py-6 px-4 lg:flex-row md:flex-row flex-column',
                 { 'flex-row-reverse': reverse },
-                { 'gap-8 md:gap-12': true }
+                { 'gap-2 md:gap-8 lg:gap-12': true }
             )}
             style={{
                 backgroundColor: 'black',
                 color: 'white',
                 borderRadius: '12px',
                 boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.05)',
-                margin: '20px 0',
+                margin: BOTTOM_MARGIN,
             }}
         >
             <div className='flex-1'>
                 <Image
                     width={150}
-                    height={150}
+                    height={350}
                     src={data.imageSrc}
                     alt='About Us'
                     className='w-full'
                     style={{
                         borderRadius: '12px',
-                        maxHeight: '300px',
+                        //maxHeight: '300px',
                         objectFit: 'cover',
                         boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.05)',
                     }}
                 />
             </div>
             <div className='flex-1'>
-                <p className='text-lg leading-relaxed '>{data.text}</p>
+                <p className='text-lg leading-relaxed text-center lg:text-left'>
+                    {data.text}
+                </p>
             </div>
         </div>
     );
@@ -132,6 +139,7 @@ const ListCard: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
                     boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.05)',
                     background: 'rgba(255,255,255, .75)',
                     color: 'black',
+                    margin: BOTTOM_MARGIN,
                 }}
             >
                 <i
@@ -157,11 +165,12 @@ const QuoteSection: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
                 background:
                     'linear-gradient(135deg,rgb(10, 10, 10),rgb(0, 0, 0))',
                 borderRadius: '12px',
-                margin: '20px 0',
+                margin: BOTTOM_MARGIN,
                 padding: '20px',
                 color: 'white',
             }}
         >
+            <h2>{data.title}</h2>
             <p className='text-2xl leading-relaxed '>{data.text}</p>
         </div>
     );
@@ -180,6 +189,7 @@ const ImageTextOverlay: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({
                 backgroundPosition: 'center',
                 borderRadius: '12px',
                 overflow: 'hidden',
+                margin: BOTTOM_MARGIN,
             }}
         >
             <div

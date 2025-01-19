@@ -1,20 +1,15 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import React from 'react';
-import XYButton from '../inputComponents/XYButton';
 
 export const EmailLink = () => {
-    const router = useRouter();
-    const handleNavigateClick = (to: string) => {
-        router.push(`/${to}`);
-    };
     return (
-        <XYButton
-            xyType='white'
-            link
-            onClick={() => handleNavigateClick('login')}
-        >
-            <strong>Login HERE</strong>
-        </XYButton>
+        <>
+            <a
+                href='mailto:support@xyian.com'
+                className='cursor-pointer underline'
+            >
+                Support@Xyian.com
+            </a>
+        </>
     );
 };

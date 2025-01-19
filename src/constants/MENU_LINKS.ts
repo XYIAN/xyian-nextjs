@@ -10,10 +10,10 @@ export const MENU_LINKS: MenuItem[] = [
     //     label: 'Project Gallery',
     //     route: 'projectGallery',
     // },
-    // {
-    //     label: 'About XYS',
-    //     route: 'about',
-    // },
+    {
+        label: 'About XYS',
+        route: 'about',
+    },
     { label: 'Client Login', route: 'login' },
     {
         label: 'Privacy & Terms',

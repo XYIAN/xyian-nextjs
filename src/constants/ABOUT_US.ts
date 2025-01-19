@@ -43,8 +43,8 @@ export const ABOUT_US: AboutUsModel[] = [
         landscape. For us, the reward is in seeing how our solutions
         help modernize businesses, streamline operations, and truly
         improve our clients' lives. We aim to build relationships
-        that fit each clientÃ¢â‚¬â„¢s unique needs and are here to support
-        you, whether youÃ¢â‚¬â„¢re looking for a long-term tech partner or
+        that fit each client's unique needs and are here to support
+        you, whether you're looking for a long-term tech partner or
         a team for a single project. Our mission is simple: to grow
         and reach more clients by demonstrating our commitment to
         excellence and our proven track record.`,
@@ -55,8 +55,8 @@ export const ABOUT_US: AboutUsModel[] = [
     {
         id: 4,
         type: 'secondary',
-        text: `WeÃ¢â‚¬â„¢re here to be your trusted partner in building impactful
-        software solutions that drive results. LetÃ¢â‚¬â„¢s connect and see
+        text: `We're here to be your trusted partner in building impactful
+        software solutions that drive results. Let's connect and see
         how we can help bring your ideas to life!`,
         title: '',
         imageSrc: '/Primary.png',
@@ -66,7 +66,7 @@ export const ABOUT_US_SPLIT: AboutUsModel[] = [
     {
         id: 1,
         type: 'primary',
-        text: `At XYIAN Software, we're passionate about helping businessesâ€”especially small businessesâ€”unlock their potential through transformative digital solutions.`,
+        text: `At XYIAN Software, we're passionate about helping businesses-especially small businesses-unlock their potential through transformative digital solutions.`,
         title: 'Welcome to XYS',
         imageSrc:
             'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/xLogo_black%20-%201.png?raw=true',
@@ -89,7 +89,7 @@ export const ABOUT_US_SPLIT: AboutUsModel[] = [
     },
     {
         id: 4,
-        type: 'primary',
+        type: 'quote',
         text: `From initial consultations where we discuss project scope, costs, and timelines, to providing a 6-month support package after project delivery, we're with you every step of the way.`,
         title: 'Guided Approach',
         imageSrc:
@@ -114,7 +114,7 @@ export const ABOUT_US_SPLIT: AboutUsModel[] = [
     {
         id: 7,
         type: 'secondary',
-        text: `We aim to build relationships that fit each clientâ€™s unique needs and are here to support you, whether youâ€™re looking for a long-term tech partner or a team for a single project.`,
+        text: `We aim to build relationships that fit each client's unique needs and are here to support you, whether you're looking for a long-term tech partner or a team for a single project.`,
         title: 'Tailored Solutions',
         imageSrc:
             'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/xLogo_black%20-%202.png?raw=true',
@@ -130,9 +130,9 @@ export const ABOUT_US_SPLIT: AboutUsModel[] = [
     {
         id: 9,
         type: 'quote',
-        text: `We're here to be your trusted partner in building impactful software solutions that drive results. Letâ€™s connect and see how we can help bring your ideas to life!`,
+        text: `We’re here to be your trusted partner in building impactful software solutions, so you can focus on what you do best—your business, your product, and your goals. With us handling the software, you won’t have to worry about the details. Let’s connect and see how we can help turn your vision into reality with seamless, stress-free solutions.`,
         title: 'What to expect with XYS',
         imageSrc:
-            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/xLogo_black%20-%205.png?raw=true',
+            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/5E5CAC2E-F192-4372-AB63-0140479853C9.png?raw=true',
     },
 ];
