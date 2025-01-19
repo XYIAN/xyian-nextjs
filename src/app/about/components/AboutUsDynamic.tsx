@@ -14,7 +14,7 @@ interface AboutUsProps {
     data: AboutUsModel[];
 }
 
-const AboutUsDynamic: React.FC<AboutUsProps> = ({ data }) => {
+export const AboutUsDynamic: React.FC<AboutUsProps> = ({ data }) => {
     const getComponentByIndex = (item: (typeof ABOUT_US)[0], index: number) => {
         const components = [
             <HeroSection key={item.id} data={item} />,
