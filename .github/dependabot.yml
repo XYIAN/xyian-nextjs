@@ -1,0 +1,33 @@
+version: 2
+updates:
+  # Update npm dependencies for the main application
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly" # Runs once a week
+    ignore:
+      # Ignore specific dependencies or certain versions
+      - dependency-name: "react"
+        versions:
+          - "^18.0.0"
+      - dependency-name: "next"
+        versions:
+          - "^15.0.0"
+    commit-message:
+      prefix: "deps" # Customize the prefix for commit messages
+    open-pull-requests-limit: 10 # Max open PRs from Dependabot
+    rebase-strategy: "auto" # Automatically rebase PRs if conflicts occur
+
+  # Update GitHub Actions workflow dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly" # Check for updates weekly
+    open-pull-requests-limit: 5 # Limit open PRs from Dependabot for actions
+
+  # Update Docker dependencies (if using Docker)
+  # - package-ecosystem: "docker"
+  #   directory: "/"
+  #   schedule:
+  #     interval: "weekly" # Weekly updates for Docker dependencies
+  #   open-pull-requests-limit: 5
