@@ -66,7 +66,7 @@ export const ABOUT_US_SPLIT: AboutUsModel[] = [
     {
         id: 1,
         type: 'primary',
-        text: `At XYIAN Software, we're passionate about helping businessesâ€”especially small businessesâ€”unlock their potential through transformative digital solutions.`,
+        text: `At XYIAN Software, we're passionate about helping businesses-especially small businesses-unlock their potential through transformative digital solutions.`,
         title: 'Welcome to XYS',
         imageSrc:
             'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/xLogo_black%20-%201.png?raw=true',
@@ -133,6 +133,6 @@ export const ABOUT_US_SPLIT: AboutUsModel[] = [
         text: `We’re here to be your trusted partner in building impactful software solutions, so you can focus on what you do best—your business, your product, and your goals. With us handling the software, you won’t have to worry about the details. Let’s connect and see how we can help turn your vision into reality with seamless, stress-free solutions.`,
         title: 'What to expect with XYS',
         imageSrc:
-            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/xLogo_black%20-%205.png?raw=true',
+            'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/5E5CAC2E-F192-4372-AB63-0140479853C9.png?raw=true',
     },
 ];

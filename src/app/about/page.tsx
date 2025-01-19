@@ -14,13 +14,13 @@ interface Props {}
 
 const AboutXYS: NextPage<Props> = ({}) => {
     return (
-        <main>
+        <div className='flex flex-column'>
             <AboutUsTitle />
             <div>
                 <AboutUsDynamic data={ABOUT_US_SPLIT} />
             </div>
             <XYSToTop />
-        </main>
+        </div>
     );
 };
 

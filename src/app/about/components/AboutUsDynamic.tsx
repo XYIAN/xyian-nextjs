@@ -11,8 +11,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 //style consts
-const BOTTOM_MARGIN: string = '0 0 10rem 0 !important';
-const FIRST_ITEM_MARGIN: string = '10rem 0 10rem 0 !important';
+const BOTTOM_MARGIN: string = '0 0 30vh 0 !important';
 interface AboutUsProps {
     data: AboutUsModel[];
 }
@@ -57,7 +56,7 @@ const HeroSection: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
                 color: '#fff',
                 borderRadius: '12px',
                 boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
-                margin: FIRST_ITEM_MARGIN,
+                margin: BOTTOM_MARGIN,
             }}
         >
             <Image
@@ -72,13 +71,15 @@ const HeroSection: React.FC<{ data: (typeof ABOUT_US)[0] }> = ({ data }) => {
                 <h1 className='text-4xl font-bold mb-4'>{data.title}</h1>
             )}
             <p className='text-lg leading-relaxed'>{data.text}</p>
-            <Button
-                label='See Our Team'
-                icon='pi pi-arrow-right'
-                className='p-button-rounded p-button-outlined mt-5'
-                style={{ color: '#fff', borderColor: '#fff' }}
-                onClick={() => handleNavigateClick('team')}
-            />
+            {data.id === 1 && (
+                <Button
+                    label='See Our Team'
+                    icon='pi pi-arrow-right'
+                    className='p-button-rounded p-button-outlined mt-5'
+                    style={{ color: '#fff', borderColor: '#fff' }}
+                    onClick={() => handleNavigateClick('team')}
+                />
+            )}
         </div>
     );
 };
@@ -91,9 +92,9 @@ const SplitSection: React.FC<{
     return (
         <div
             className={classNames(
-                'split-section flex align-items-center py-6 px-4',
+                'split-section flex align-items-center py-6 px-4 lg:flex-row md:flex-row flex-column',
                 { 'flex-row-reverse': reverse },
-                { 'gap-8 md:gap-12': true }
+                { 'gap-2 md:gap-8 lg:gap-12': true }
             )}
             style={{
                 backgroundColor: 'black',
@@ -106,20 +107,22 @@ const SplitSection: React.FC<{
             <div className='flex-1'>
                 <Image
                     width={150}
-                    height={150}
+                    height={350}
                     src={data.imageSrc}
                     alt='About Us'
                     className='w-full'
                     style={{
                         borderRadius: '12px',
-                        maxHeight: '300px',
+                        //maxHeight: '300px',
                         objectFit: 'cover',
                         boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.05)',
                     }}
                 />
             </div>
             <div className='flex-1'>
-                <p className='text-lg leading-relaxed '>{data.text}</p>
+                <p className='text-lg leading-relaxed text-center lg:text-left'>
+                    {data.text}
+                </p>
             </div>
         </div>
     );
