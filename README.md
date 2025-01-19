@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3230aa1a-f4c2-46d9-860d-793f4c93cdae" alt="Primary" />
+  <img src="https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/2AB0307C-9BC8-4823-947A-30AA6BA79E09.png?raw=true" alt="Primary" />
 </p>
 
 # XYIAN Software Official Site 
