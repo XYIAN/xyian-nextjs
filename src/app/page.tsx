@@ -24,9 +24,10 @@ export default function Home() {
                     width='250'
                     className={` ${BOTTOM_PADDING}`}
                 />
-                <h1 className={`text-center m-0 ${BOTTOM_PADDING}`}>
-                    XYIAN Software
-                </h1>
+                <h1 className={`text-center m-0 `}>XYIAN</h1>
+                <p className={`text-center ${BOTTOM_PADDING}`}>
+                    Personalized solutions at your fingertips
+                </p>
             </div>
             <MainLinks />
             <p className=' flex align-items-center justify-content-center m-0 pb-1'>
