@@ -15,7 +15,7 @@ export const TEAM_LIST: MemberDetail[] = [
         imageSrc:
             'https://github.com/XYIANSoftware/images/blob/main/r2yedit.jpg?raw=true',
         position: 'Software Development',
-        bio: 'I turn coffee into clean, efficient code and make software do things it didn’t know it could. Whether it’s front-end magic, back-end wizardry, or just making sure your app doesn’t crash, I’ve got it covered.',
+        bio: 'Whether it’s front-end magic, back-end finesse, or just making sure your app doesn’t crash, I’ve got it covered.',
     },
     {
         name: 'Gabriel Villadpudua',
@@ -23,7 +23,7 @@ export const TEAM_LIST: MemberDetail[] = [
         imageSrc:
             'https://media.licdn.com/dms/image/v2/D5603AQEUl7SOaeWDYg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1725493937498?e=1745452800&v=beta&t=44IME760pVDNY3d8OlsyCMAgrCr2nj-pQ9ypvxSpIbQ',
         position: 'Sales & Marketing',
-        bio: 'I sell things, market things, and make sure people actually know how awesome our products are. If there’s a strategy to scale, a campaign to launch, or a way to make your brand stand out, I’m on it. Also, probably the only person here who owns more than five dress shirts.',
+        bio: 'I sell, market, and make sure people actually know how awesome our products are. If there’s a strategy to scale, a campaign to launch, or a way to make your brand stand out, I’m on it. Also, probably the only person here who owns more than five dress shirts.',
     },
     {
         name: 'Joel Sandoval',
