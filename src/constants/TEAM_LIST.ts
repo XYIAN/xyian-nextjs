@@ -34,12 +34,12 @@ export const TEAM_LIST: MemberDetail[] = [
         position: 'Sales & Marketing',
         bio: 'I make sure the right people see the right product at the right time—and actually want to buy it. Sales and marketing isn’t just about closing deals, it’s about making connections, building trust, and having just the right amount of hustle.',
     },
-    {
-        name: 'Meryem Martinez',
-        id: 4,
-        imageSrc:
-            'https://github.com/XYIANSoftware/images/blob/main/projects/coming%20soon%20square.png?raw=true',
-        position: 'Finance & Operations',
-        bio: 'I keep the numbers from getting messy, the operations running smooth, and the business from accidentally setting itself on fire. If there’s a way to make things more efficient (and profitable), I’ll find it. Because even the best ideas need smart execution to win.',
-    },
+    // {
+    //     name: 'Meryem Martinez',
+    //     id: 4,
+    //     imageSrc:
+    //         'https://github.com/XYIANSoftware/images/blob/main/projects/coming%20soon%20square.png?raw=true',
+    //     position: 'Finance & Operations',
+    //     bio: 'I keep the numbers from getting messy, the operations running smooth, and the business from accidentally setting itself on fire. If there’s a way to make things more efficient (and profitable), I’ll find it. Because even the best ideas need smart execution to win.',
+    // },
 ];
