@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 .displayImage {
     max-width: 45%;
     transition: max-width 0.6s ease;

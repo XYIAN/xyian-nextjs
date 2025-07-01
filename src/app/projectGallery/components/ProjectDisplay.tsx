@@ -1,13 +1,14 @@
-import { ProjectModel } from '@/types';
+import React, { useState } from 'react';
 import Image from 'next/image';
+import { Skeleton } from 'primereact/skeleton';
+import { ProjectModel } from '@/types';
+
 interface ProjectDisplayProps {
     projects: ProjectModel[];
 }
 
 export const ProjectDisplay = ({ projects }: ProjectDisplayProps) => {
-    //TODO eventually add skeleton and lazy loading to images
-    //TODO add tooltip for each item
-    //TODO add short title for each item (mostly for mobile)
+    const [loading, setLoading] = useState(true);
     return (
         <div className='gallery'>
             {projects.map((proj, index) => (
@@ -20,20 +21,40 @@ export const ProjectDisplay = ({ projects }: ProjectDisplayProps) => {
                         target='_blank'
                         rel='noopener noreferrer'
                     >
-                        <Image
-                            src={proj.imgSrc ? proj.imgSrc : ''}
-                            alt={`Gallery image ${index + 1}`}
-                            width={500}
-                            height={500}
-                        />
-                        {/* <h1
-                        className='title-element absolute bottom-0 right-0 left-0 text-center'
-                        style={{
-                            transform: 'translateY(3.3rem)',
-                        }}
+                        <div
+                            style={{
+                                position: 'relative',
+                                width: 500,
+                                height: 500,
+                            }}
                         >
-                        {proj.title || `Project ${index + 1}`}
-                    </h1> */}
+                            {loading && (
+                                <Skeleton
+                                    width={500 + 'px'}
+                                    height={500 + 'px'}
+                                    borderRadius='12px'
+                                />
+                            )}
+                            <Image
+                                src={proj.imgSrc ? proj.imgSrc : ''}
+                                alt={`Gallery image ${index + 1}`}
+                                width={500}
+                                height={500}
+                                style={{
+                                    display: loading ? 'none' : 'block',
+                                    borderRadius: 12,
+                                }}
+                                onLoad={() => setLoading(false)}
+                            />
+                        </div>
+                        {/* <h1
+						className='title-element absolute bottom-0 right-0 left-0 text-center'
+						style={{
+							transform: 'translateY(3.3rem)',
+						}}
+						>
+						{proj.title || `Project ${index + 1}`}
+					</h1> */}
                     </a>
                 </span>
             ))}

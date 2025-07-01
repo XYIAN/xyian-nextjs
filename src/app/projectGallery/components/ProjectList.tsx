@@ -1,8 +1,10 @@
 import { ProjectModel } from '@/types';
-import React from 'react';
+import React, { useState } from 'react';
 import { Accordion, AccordionTab } from 'primereact/accordion';
 import Image from 'next/image';
 import '../../../styles/accordionOverride.scss';
+import { Skeleton } from 'primereact/skeleton';
+
 interface ProjectListProps {
     projects: ProjectModel[];
 }
@@ -25,6 +27,44 @@ const AccordionHeader = ({ title, iconUrl }: AccordionHeaderProps) => {
                 />
             )}
             <h5 className='m-0'>{title}</h5>
+        </div>
+    );
+};
+
+interface ProjectListItemProps {
+    imgSrc: string;
+    alt: string;
+    width?: number;
+    height?: number;
+}
+
+const ProjectListItem = ({
+    imgSrc,
+    alt,
+    width = 200,
+    height = 120,
+}: ProjectListItemProps) => {
+    const [loading, setLoading] = useState(true);
+    return (
+        <div style={{ position: 'relative', width, height }}>
+            {loading && (
+                <Skeleton
+                    width={width + 'px'}
+                    height={height + 'px'}
+                    borderRadius='12px'
+                />
+            )}
+            <Image
+                src={imgSrc}
+                alt={alt}
+                width={width}
+                height={height}
+                style={{
+                    display: loading ? 'none' : 'block',
+                    borderRadius: 12,
+                }}
+                onLoad={() => setLoading(false)}
+            />
         </div>
     );
 };
@@ -57,12 +97,9 @@ const ProjectList = ({ projects }: ProjectListProps) => {
                             >
                                 <div className='p-3'>
                                     <div className='flex flex-column md:flex-row align-items-start gap-4'>
-                                        <Image
-                                            src={imageSource}
+                                        <ProjectListItem
+                                            imgSrc={imageSource}
                                             alt={project.title}
-                                            width={50}
-                                            height={50}
-                                            className='border-round shadow-1'
                                         />
                                         <div>
                                             <h6 className='mb-2'>

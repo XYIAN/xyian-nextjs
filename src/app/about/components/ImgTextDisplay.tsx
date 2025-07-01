@@ -1,33 +1,41 @@
-import { Image } from 'primereact/image';
-import React from 'react';
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { Skeleton } from 'primereact/skeleton';
 
-interface Props {
+interface ImgTextDisplayProps {
     imgSrc: string;
-    description: string;
     alt: string;
-    imgOrientation?: 'vertical' | 'horizontal';
+    width?: number;
+    height?: number;
 }
+
 const ImgTextDisplay = ({
     imgSrc,
-    description,
     alt,
-    imgOrientation,
-}: Props) => {
-    // const x = imgOrientation?.x === 'left' ? '' : '';
+    width = 200,
+    height = 200,
+}: ImgTextDisplayProps) => {
+    const [loading, setLoading] = useState(true);
     return (
-        <div
-            className={`imgDisplay flex gap-2 justify-content-${
-                imgOrientation === 'horizontal'
-                    ? 'between'
-                    : 'center flex-column'
-            }`}
-        >
-            <div className='imgDisplay-image-wrapper'>
-                <Image className='imgDisplay-image' alt={alt} src={imgSrc} />
-            </div>
-            <div className='imgDisplay-description-wrapper'>
-                <p className='imgDisplay-description'>{description}</p>
-            </div>
+        <div style={{ position: 'relative', width, height }}>
+            {loading && (
+                <Skeleton
+                    width={width + 'px'}
+                    height={height + 'px'}
+                    borderRadius='12px'
+                />
+            )}
+            <Image
+                src={imgSrc}
+                alt={alt}
+                width={width}
+                height={height}
+                style={{
+                    display: loading ? 'none' : 'block',
+                    borderRadius: 12,
+                }}
+                onLoad={() => setLoading(false)}
+            />
         </div>
     );
 };

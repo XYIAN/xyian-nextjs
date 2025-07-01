@@ -1,6 +1,4 @@
-// Define variables for consistent styling
-$line-color: rgba(255, 255, 255, 0.9); // Bright white line
-$text-color: #ffffff;
+@use './variables' as *;
 
 // Scoped styles for the title container
 .title-container {
@@ -26,7 +24,7 @@ $text-color: #ffffff;
         background: linear-gradient(
             to right,
             transparent 0%,
-            $line-color 50%,
+            $color-white 50%,
             transparent 100%
         );
         animation: shooting-star 2.5s linear infinite; // Faster animation for shooting star effect
@@ -37,7 +35,7 @@ $text-color: #ffffff;
     &__heading {
         font-size: 3rem;
         font-weight: bold;
-        color: $text-color;
+        color: $color-white;
         position: relative; // Ensure it sits above the line
         z-index: 1; // Layer above the line
         background: transparent;
@@ -50,7 +48,7 @@ $text-color: #ffffff;
     // Styling for the subheading
     &__subheading {
         font-size: 1.2rem;
-        color: $text-color;
+        color: $color-white;
         margin-top: 0.5rem;
         text-transform: uppercase;
         letter-spacing: 0.1rem;
