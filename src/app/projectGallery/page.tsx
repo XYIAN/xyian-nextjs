@@ -1,7 +1,7 @@
 'use client';
 import { ProjectDisplay } from './components/ProjectDisplay';
 import { PROJECT_LIST } from '@/constants';
-import '../../styles/_gallery.scss';
+
 export default function ProjectGallery() {
     return (
         <main>

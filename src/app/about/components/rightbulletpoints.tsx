@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Skeleton } from 'primereact/skeleton';
-import '../../../styles/about/bulletpoints.scss';
 
 interface bulletPointProps {
     message: string;

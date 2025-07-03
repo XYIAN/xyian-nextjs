@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
+import { Image } from 'primereact/image';
 import { Skeleton } from 'primereact/skeleton';
 import { MemberDetail } from '@/types';
 import { Card } from 'primereact/card';
-import '../../../styles/displayCard.scss';
-import '../../../styles/displayImage.scss';
-import '../../../styles/_teamPage.scss';
 
 interface PersonDisplayProps {
     memberDetails: MemberDetail;
@@ -14,30 +11,70 @@ interface PersonDisplayProps {
 export const PersonDisplay = ({ memberDetails }: PersonDisplayProps) => {
     const { name, imageSrc, position, bio } = memberDetails;
     const [loading, setLoading] = useState(true);
+    const [imageError, setImageError] = useState(false);
+
+    // Fallback to show image after 3 seconds even if onLoad doesn't fire
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if (loading) {
+                setLoading(false);
+            }
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, [loading]);
+
+    const handleImageLoad = () => {
+        setLoading(false);
+        setImageError(false);
+    };
+
+    const handleImageError = () => {
+        setLoading(false);
+        setImageError(true);
+    };
 
     const CardHeaderImage = () => {
         return (
             <div className='flex justify-content-center align-content-center'>
-                <div style={{ position: 'relative', width: 120, height: 120 }}>
+                <div style={{ position: 'relative', width: 200, height: 200 }}>
                     {loading && (
                         <Skeleton
-                            width={120 + 'px'}
-                            height={120 + 'px'}
+                            width='200px'
+                            height='200px'
                             borderRadius='50%'
                         />
                     )}
-                    <Image
-                        className='displayImage'
-                        alt={name}
-                        src={imageSrc}
-                        width={120}
-                        height={120}
-                        style={{
-                            display: loading ? 'none' : 'block',
-                            borderRadius: '50%',
-                        }}
-                        onLoad={() => setLoading(false)}
-                    />
+                    {!loading && !imageError && (
+                        <Image
+                            src={imageSrc}
+                            alt={name}
+                            width='200'
+                            height='200'
+                            preview
+                            imageClassName='border-round'
+                            style={{ borderRadius: '50%', objectFit: 'cover' }}
+                            onLoad={handleImageLoad}
+                            onError={handleImageError}
+                        />
+                    )}
+                    {imageError && (
+                        <div
+                            style={{
+                                width: 200,
+                                height: 200,
+                                borderRadius: '50%',
+                                backgroundColor: '#f0f0f0',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                fontSize: '3rem',
+                                color: '#666',
+                            }}
+                        >
+                            {name.charAt(0)}
+                        </div>
+                    )}
                 </div>
             </div>
         );

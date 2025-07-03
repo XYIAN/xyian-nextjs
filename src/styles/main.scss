@@ -1,0 +1,23 @@
+// Main SCSS file - modern @use syntax for optimal performance
+// This file should be imported in layout.tsx
+
+// 1. Variables first (CSS custom properties)
+@use 'base/variables' as *;
+
+// 2. Base styles (mixins, reset, typography, common)
+@use 'base' as *;
+
+// 3. Component styles
+@use 'components' as *;
+
+// 4. Layout styles
+@use 'layouts' as *;
+
+// 5. Page-specific styles
+@use 'pages' as *;
+
+// 6. Theme styles (if any)
+// @use 'themes' as *;
+
+// 7. Utility styles (if any)
+// @use 'utilities' as *;

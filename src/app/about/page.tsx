@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import { XYSToTop } from '@/components';
 // import LeftBulletPoints from './components/leftbulletpoints';
 // import RightBulletPoints from './components/rightbulletpoints';
-import '../../styles/about/aboutStyles.scss';
+
 import { ABOUT_US, ABOUT_US_SPLIT } from '@/constants';
 // import FullDisplay from './components/FullDisplay';
 import AboutUsDynamic from './components/AboutUsDynamic';

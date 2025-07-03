@@ -5,7 +5,6 @@ import {
     faLinkedin,
     faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import '../../styles/linkStyles.scss';
 
 export interface MainLinksProps {
     className?: string;

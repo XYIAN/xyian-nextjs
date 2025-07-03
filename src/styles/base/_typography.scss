@@ -1,0 +1,245 @@
+// Performance-optimized typography using CSS custom properties
+@use 'mixins' as mixins;
+
+// Typography classes using CSS custom properties
+.text-xs {
+    font-size: var(--text-xs);
+}
+.text-sm {
+    font-size: var(--text-sm);
+}
+.text-base {
+    font-size: var(--text-base);
+}
+.text-lg {
+    font-size: var(--text-lg);
+}
+.text-xl {
+    font-size: var(--text-xl);
+}
+.text-2xl {
+    font-size: var(--text-2xl);
+}
+.text-3xl {
+    font-size: var(--text-3xl);
+}
+.text-4xl {
+    font-size: var(--text-4xl);
+}
+.text-5xl {
+    font-size: var(--text-5xl);
+}
+
+.font-light {
+    font-weight: var(--font-light);
+}
+.font-normal {
+    font-weight: var(--font-normal);
+}
+.font-medium {
+    font-weight: var(--font-medium);
+}
+.font-semibold {
+    font-weight: var(--font-semibold);
+}
+.font-bold {
+    font-weight: var(--font-bold);
+}
+
+.leading-tight {
+    line-height: var(--leading-tight);
+}
+.leading-normal {
+    line-height: var(--leading-normal);
+}
+.leading-relaxed {
+    line-height: var(--leading-relaxed);
+}
+
+// Text utilities
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-justify {
+    text-align: justify;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+
+.underline {
+    text-decoration: underline;
+}
+.no-underline {
+    text-decoration: none;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Performance-optimized heading styles
+h1,
+.h1 {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    font-family: var(--font-primary);
+
+    @include mixins.responsive(mobile) {
+        font-size: var(--text-3xl);
+    }
+}
+
+h2,
+.h2 {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-tight);
+    font-family: var(--font-primary);
+
+    @include mixins.responsive(mobile) {
+        font-size: var(--text-2xl);
+    }
+}
+
+h3,
+.h3 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-tight);
+    font-family: var(--font-primary);
+}
+
+h4,
+.h4 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-medium);
+    line-height: var(--leading-normal);
+    font-family: var(--font-primary);
+}
+
+h5,
+.h5 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-medium);
+    line-height: var(--leading-normal);
+    font-family: var(--font-primary);
+}
+
+h6,
+.h6 {
+    font-size: var(--text-base);
+    font-weight: var(--font-medium);
+    line-height: var(--leading-normal);
+    font-family: var(--font-primary);
+}
+
+// Performance-optimized paragraph styles
+p {
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+    font-family: var(--font-primary);
+    color: var(--color-white);
+}
+
+// Performance-optimized link styles
+a {
+    color: var(--color-green-accent);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+
+    &:hover {
+        color: var(--color-white);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-green-accent);
+        outline-offset: 2px;
+    }
+}
+
+// Performance-optimized list styles
+ul,
+ol {
+    margin: 0;
+    padding-left: var(--spacing-lg);
+    line-height: var(--leading-normal);
+}
+
+li {
+    margin-bottom: var(--spacing-xs);
+}
+
+// Performance-optimized code styles
+code {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    background-color: var(--color-dark-grey);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    color: var(--color-green-accent);
+}
+
+pre {
+    font-family: var(--font-mono);
+    background-color: var(--color-dark-grey);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+
+    code {
+        background: none;
+        padding: 0;
+    }
+}
+
+// Performance-optimized blockquote styles
+blockquote {
+    margin: var(--spacing-lg) 0;
+    padding-left: var(--spacing-lg);
+    border-left: 4px solid var(--color-green-accent);
+    font-style: italic;
+    color: var(--color-grey);
+}
+
+// Performance-optimized small text
+small {
+    font-size: var(--text-sm);
+    color: var(--color-grey);
+}
+
+// Performance-optimized strong and emphasis
+strong {
+    font-weight: var(--font-bold);
+}
+
+em {
+    font-style: italic;
+}
+
+// Performance-optimized text selection
+::selection {
+    background-color: var(--color-green-accent);
+    color: var(--color-black);
+}
+
+::-moz-selection {
+    background-color: var(--color-green-accent);
+    color: var(--color-black);
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../styles/sleekTitle.scss';
+
 const AboutUsTitle = () => {
     return (
         <div className='title-container'>

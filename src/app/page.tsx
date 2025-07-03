@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { MainLinks } from '@/components/links/MainLinks';
-import '../styles/inputs/buttonHover.scss';
+
 import LoginLink from '@/components/links/LoginLink';
 const BOTTOM_PADDING = ` pb-4`;
 

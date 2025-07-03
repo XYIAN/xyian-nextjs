@@ -5,7 +5,6 @@ import { PrimeReactProvider } from 'primereact/api';
 import { confirmDialog } from 'primereact/confirmdialog';
 import { Password } from 'primereact/password';
 import { useState } from 'react';
-import '../../styles/_links.scss';
 
 export default function Login() {
     // const labelModel: XYLabelModel = {

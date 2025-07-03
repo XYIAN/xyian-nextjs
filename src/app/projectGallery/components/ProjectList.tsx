@@ -2,7 +2,7 @@ import { ProjectModel } from '@/types';
 import React, { useState } from 'react';
 import { Accordion, AccordionTab } from 'primereact/accordion';
 import Image from 'next/image';
-import '../../../styles/accordionOverride.scss';
+
 import { Skeleton } from 'primereact/skeleton';
 
 interface ProjectListProps {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../../styles/about/bulletpoints.scss';
+
 import Image from 'next/image';
 import { Skeleton } from 'primereact/skeleton';
 

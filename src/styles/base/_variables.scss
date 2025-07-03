@@ -1,0 +1,138 @@
+// CSS Custom Properties for optimal performance and theming
+:root {
+    // Color palette - using CSS custom properties for runtime theming
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-grey: #e5e5e5;
+    --color-dark-grey: #222222;
+    --color-light-grey: #f5f5f5;
+    --color-green-accent: #00ff88;
+    --color-blue: #83af9b;
+    --color-brown: #774f38;
+    --color-beige: #ece5ce;
+    --color-yellow: #f9cdad;
+    --color-pink: #fe4365;
+
+    // Typography
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        'Roboto', sans-serif;
+    --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+        monospace;
+
+    // Font weights
+    --font-light: 300;
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    // Font sizes (using rem for better accessibility)
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+
+    // Line heights
+    --leading-tight: 1.25;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.75;
+
+    // Spacing (using rem for consistency)
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+
+    // Z-index layers
+    --z-modal: 9999;
+    --z-header: 1000;
+    --z-footer: 1000;
+
+    // Transitions
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    // Shadows
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+    // Border radius
+    --radius-sm: 0.25rem;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+}
+
+// SCSS variables for compile-time use (fallback for older browsers)
+$color-black: var(--color-black);
+$color-white: var(--color-white);
+$color-grey: var(--color-grey);
+$color-dark-grey: var(--color-dark-grey);
+$color-light-grey: var(--color-light-grey);
+$color-green-accent: var(--color-green-accent);
+$color-blue: var(--color-blue);
+$color-brown: var(--color-brown);
+$color-beige: var(--color-beige);
+$color-yellow: var(--color-yellow);
+$color-pink: var(--color-pink);
+
+// Font variables
+$font-primary: var(--font-primary);
+$font-mono: var(--font-mono);
+$font-light: var(--font-light);
+$font-normal: var(--font-normal);
+$font-medium: var(--font-medium);
+$font-semibold: var(--font-semibold);
+$font-bold: var(--font-bold);
+
+// Typography variables
+$text-xs: var(--text-xs);
+$text-sm: var(--text-sm);
+$text-base: var(--text-base);
+$text-lg: var(--text-lg);
+$text-xl: var(--text-xl);
+$text-2xl: var(--text-2xl);
+$text-3xl: var(--text-3xl);
+$text-4xl: var(--text-4xl);
+$text-5xl: var(--text-5xl);
+
+// Spacing variables
+$spacing-xs: var(--spacing-xs);
+$spacing-sm: var(--spacing-sm);
+$spacing-md: var(--spacing-md);
+$spacing-lg: var(--spacing-lg);
+$spacing-xl: var(--spacing-xl);
+$spacing-2xl: var(--spacing-2xl);
+
+// Z-index variables
+$z-modal: var(--z-modal);
+$z-header: var(--z-header);
+$z-footer: var(--z-footer);
+
+// Transition variables
+$transition-fast: var(--transition-fast);
+$transition-normal: var(--transition-normal);
+$transition-slow: var(--transition-slow);
+
+// Shadow variables
+$shadow-sm: var(--shadow-sm);
+$shadow-md: var(--shadow-md);
+$shadow-lg: var(--shadow-lg);
+
+// Border radius variables
+$radius-sm: var(--radius-sm);
+$radius-md: var(--radius-md);
+$radius-lg: var(--radius-lg);
+$radius-xl: var(--radius-xl);
+
+// Font imports
+@import url('https://fonts.googleapis.com/css?family=Inter:400,700&display=swap');
