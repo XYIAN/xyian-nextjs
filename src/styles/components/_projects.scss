@@ -1,0 +1,256 @@
+// Project Gallery Styles
+.project-card {
+    background: linear-gradient(
+        135deg,
+        rgba(31, 41, 55, 0.8) 0%,
+        rgba(17, 24, 39, 0.9) 100%
+    );
+    border: 1px solid rgba(75, 85, 99, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent
+        );
+        transition: left 0.5s;
+        z-index: 1;
+    }
+
+    &:hover {
+        transform: translateY(-8px) scale(1.02);
+        border-color: rgba(59, 130, 246, 0.5);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
+            0 0 20px rgba(59, 130, 246, 0.2);
+
+        &::before {
+            left: 100%;
+        }
+    }
+
+    // Card header (image container)
+    .p-card-header {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.5rem 0.5rem 0 0;
+
+        img {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        &:hover img {
+            transform: scale(1.1);
+        }
+    }
+
+    // Card content
+    .p-card-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    // Card footer
+    .p-card-footer {
+        position: relative;
+        z-index: 2;
+        border-top: 1px solid rgba(75, 85, 99, 0.3);
+        background: rgba(17, 24, 39, 0.5);
+    }
+
+    // Status and category chips
+    .p-chip {
+        transition: all 0.2s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    // Technology chips
+    .p-chip.bg-gray-700 {
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: rgba(59, 130, 246, 0.8) !important;
+            transform: scale(1.05);
+        }
+    }
+}
+
+// Project Grid Animation
+.project-grid {
+    .project-card {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.6s ease-out forwards;
+
+        @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i * 0.1}s;
+            }
+        }
+    }
+}
+
+// Filter Section
+.filter-section {
+    background: rgba(31, 41, 55, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(75, 85, 99, 0.3);
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba(31, 41, 55, 0.8);
+        border-color: rgba(59, 130, 246, 0.3);
+    }
+}
+
+// Search Input
+.p-inputtext {
+    background: rgba(17, 24, 39, 0.8);
+    border: 1px solid rgba(75, 85, 99, 0.5);
+    color: white;
+    transition: all 0.3s ease;
+
+    &:focus {
+        background: rgba(17, 24, 39, 0.9);
+        border-color: rgba(59, 130, 246, 0.8);
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    }
+
+    &::placeholder {
+        color: rgba(156, 163, 175, 0.7);
+    }
+}
+
+// Dropdown
+.p-dropdown {
+    background: rgba(17, 24, 39, 0.8);
+    border: 1px solid rgba(75, 85, 99, 0.5);
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: rgba(59, 130, 246, 0.5);
+    }
+
+    &.p-focus {
+        border-color: rgba(59, 130, 246, 0.8);
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    }
+
+    .p-dropdown-label {
+        color: white;
+    }
+
+    .p-dropdown-trigger {
+        color: rgba(156, 163, 175, 0.7);
+    }
+}
+
+// Project Detail Page
+.project-detail {
+    .project-image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+        img {
+            transition: transform 0.5s ease;
+        }
+
+        &:hover img {
+            transform: scale(1.05);
+        }
+    }
+
+    .project-info {
+        background: rgba(31, 41, 55, 0.8);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(75, 85, 99, 0.3);
+        border-radius: 0.75rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+// Animations
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .project-card {
+        &:hover {
+            transform: translateY(-4px) scale(1.01);
+        }
+    }
+
+    .filter-section {
+        .p-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+// Loading states
+.project-loading {
+    background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
