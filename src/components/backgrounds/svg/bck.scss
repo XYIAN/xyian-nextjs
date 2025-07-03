@@ -1,4 +1,5 @@
 // @import 'https://fonts.googleapis.com/css?family=Playfair+Display:400,700i,900i';
+@use 'sass:math';
 
 $green: #7ceaa4;
 $purple: #3b3d54;
@@ -50,13 +51,13 @@ $purple: #3b3d54;
 
 $total: 10;
 @for $i from 1 through $total {
-    $scale: random(2) - 0.4;
+    $scale: math.random(2) - 0.4;
 
     .svg:nth-child(#{$i}) {
-        left: random(120) * 1% - 20;
-        animation: raise#{$i} 6 + random(15) + s linear infinite;
-        animation-delay: random(5) - 6 + s;
-        transform: scale(0.1 * $i - 0.7) rotate(random(360) + deg);
+        left: math.random(120) * 1% - 20;
+        animation: raise#{$i} 6 + math.random(15) + s linear infinite;
+        animation-delay: math.random(5) - 6 + s;
+        transform: scale(0.1 * $i - 0.7) rotate(math.random(360) + deg);
         //z-index: $i - 7;
         z-index: 0;
         filter: blur($i - 6 + px);
@@ -64,7 +65,7 @@ $total: 10;
         @keyframes raise#{$i} {
             to {
                 bottom: 150vh;
-                transform: scale(0.25 * $i - 0.6) rotate(random(360) + deg);
+                transform: scale(0.25 * $i - 0.6) rotate(math.random(360) + deg);
             }
         }
     }

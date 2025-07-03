@@ -1,7 +1,6 @@
 'use client';
 import { XYLabelModel } from '@/types';
 import XYButton from '@/components/inputComponents/XYButton';
-import { PrimeReactProvider } from 'primereact/api';
 import { confirmDialog } from 'primereact/confirmdialog';
 import { Password } from 'primereact/password';
 import { useState } from 'react';

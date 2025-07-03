@@ -39,7 +39,39 @@ export default function RootLayout({
                     `}
                 </Script>
             </head>
-            <PrimeReactProvider>
+            <PrimeReactProvider
+                value={{
+                    ripple: true,
+                    inputStyle: 'filled',
+                    pt: {
+                        // Global PrimeReact component styling
+                        button: {
+                            root: {
+                                style: {
+                                    borderRadius: 'var(--radius-md)',
+                                    fontWeight: 'var(--font-medium)',
+                                },
+                            },
+                        },
+                        card: {
+                            root: {
+                                style: {
+                                    backgroundColor: 'var(--color-dark-grey)',
+                                    border: '1px solid var(--color-grey)',
+                                    borderRadius: 'var(--radius-lg)',
+                                },
+                            },
+                        },
+                        skeleton: {
+                            root: {
+                                style: {
+                                    backgroundColor: 'var(--color-grey)',
+                                },
+                            },
+                        },
+                    },
+                }}
+            >
                 <body className={inter.className}>
                     <Providers>{children}</Providers>
                 </body>
