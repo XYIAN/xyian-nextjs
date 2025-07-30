@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.3.1] - 2024-12-01
+
+### Fixed
+
+-   **Security Vulnerabilities**
+    -   Fixed critical vulnerability in form-data package
+    -   Resolved unsafe random function issue in form-data boundary selection
+    -   All security vulnerabilities now addressed
+
+### Changed
+
+-   **Dependency Updates**
+    -   Updated @types/node to 24.1.0 for latest TypeScript definitions
+    -   Updated @types/react to 19.1.9 for improved React type safety
+    -   Updated @types/react-dom to 19.1.7 for DOM type definitions
+    -   Updated sharp to 0.34.3 for improved image processing
+    -   Updated all minor and patch versions via npm update
+    -   Verified build success with all updated dependencies
+
+### Technical Improvements
+
+-   **Build System**
+    -   Maintained compatibility with Next.js 15.4.5
+    -   Ensured zero vulnerabilities in production build
+    -   Improved development environment stability
+
 ## [4.3.0] - 2024-12-01
 
 ### Added
@@ -45,6 +71,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Version History
 
+-   **4.3.1** - Dependency updates and security fixes
 -   **4.3.0** - Codebase indexing, documentation updates, and public README redesign
 
 ---
