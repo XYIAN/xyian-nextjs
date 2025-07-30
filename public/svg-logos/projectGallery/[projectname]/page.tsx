@@ -7,9 +7,10 @@ import { Card } from 'primereact/card';
 import { Divider } from 'primereact/divider';
 import { useParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { ProjectModel } from '@/types';
+import { ProjectModel } from '@/types/projectGalleryTypes';
 import Link from 'next/link';
-import Image from 'next/image';
+import { Image } from 'primereact/image';
+import { Skeleton } from 'primereact/skeleton';
 
 /**
  * ProjectDetail page displays detailed information for a single project, including image, long description,
@@ -21,7 +22,8 @@ export default function ProjectDetail() {
     const params = useParams();
     const router = useRouter();
     const [project, setProject] = useState<ProjectModel | null>(null);
-    const [imageLoaded, setImageLoaded] = useState(false);
+    const [imageLoading, setImageLoading] = useState<boolean>(true);
+    const [imageError, setImageError] = useState<boolean>(false);
 
     useEffect(() => {
         const projectName = (params.projectname as string).replace(/-/g, ' ');
@@ -49,7 +51,7 @@ export default function ProjectDetail() {
         );
     }
 
-    const getStatusColor = (status: string) => {
+    const getStatusColor = (status: string): string => {
         switch (status) {
             case 'completed':
                 return 'success';
@@ -62,7 +64,7 @@ export default function ProjectDetail() {
         }
     };
 
-    const getCategoryColor = (category: string) => {
+    const getCategoryColor = (category: string): string => {
         switch (category) {
             case 'web':
                 return 'primary';
@@ -136,24 +138,40 @@ export default function ProjectDetail() {
                     <div className='order-2 lg:order-1'>
                         <Card className='overflow-hidden'>
                             <div className='relative w-full h-96'>
-                                <Image
-                                    src={
-                                        project.imgSrc ||
-                                        '/images/XYIAN_BANNER.png'
-                                    }
-                                    alt={project.title}
-                                    fill
-                                    className={`object-cover rounded-lg transition-opacity duration-300 ${
-                                        imageLoaded
-                                            ? 'opacity-100'
-                                            : 'opacity-0'
-                                    }`}
-                                    onLoad={() => setImageLoaded(true)}
-                                    onError={() => setImageLoaded(true)}
-                                    sizes='(max-width: 1024px) 100vw, 50vw'
-                                />
-                                {!imageLoaded && (
-                                    <div className='absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 animate-pulse rounded-lg' />
+                                {imageLoading && (
+                                    <div className='w-full h-96 bg-gray-700 flex items-center justify-center'>
+                                        <Skeleton width='100%' height='24rem' />
+                                    </div>
+                                )}
+                                {!imageError && (
+                                    <Image
+                                        src={
+                                            project.imgSrc ||
+                                            '/svg-logos/XYIAN_Primary.svg'
+                                        }
+                                        alt={project.title}
+                                        width='100%'
+                                        height='24rem'
+                                        preview
+                                        className={`w-full h-96 object-cover transition-opacity duration-300 ${
+                                            imageLoading
+                                                ? 'opacity-0'
+                                                : 'opacity-100'
+                                        }`}
+                                        onLoad={() => setImageLoading(false)}
+                                        onError={() => {
+                                            setImageError(true);
+                                            setImageLoading(false);
+                                        }}
+                                    />
+                                )}
+                                {imageError && (
+                                    <div className='w-full h-96 bg-gray-700 flex items-center justify-center'>
+                                        <div className='text-gray-400 text-center'>
+                                            <i className='pi pi-image text-4xl mb-2'></i>
+                                            <p>Image not available</p>
+                                        </div>
+                                    </div>
                                 )}
                             </div>
                         </Card>
@@ -182,7 +200,7 @@ export default function ProjectDetail() {
                                     </h3>
                                     <div className='flex flex-wrap gap-2'>
                                         {project.technologies.map(
-                                            (tech, idx) => (
+                                            (tech: string, idx: number) => (
                                                 <Chip
                                                     key={idx}
                                                     label={tech}
@@ -202,7 +220,7 @@ export default function ProjectDetail() {
                                     </h3>
                                     <ul className='space-y-2'>
                                         {project.features.map(
-                                            (feature, idx) => (
+                                            (feature: string, idx: number) => (
                                                 <li
                                                     key={idx}
                                                     className='flex items-center text-gray-300'

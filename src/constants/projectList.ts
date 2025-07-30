@@ -8,7 +8,7 @@ export const PROJECT_LIST: ProjectModel[] = [
             'XYIAN Software Public web application built with nextjs & typescript',
         longDetails:
             'A comprehensive software company website showcasing our services, team, and portfolio. Built with modern web technologies including Next.js 15, TypeScript, PrimeReact, and SCSS. Features responsive design, SEO optimization, and smooth animations.',
-        imgSrc: '/images/XYIAN_BANNER.png', //use one from logo?
+        imgSrc: '/svg-logos/XYIAN_Primary.svg',
         url: 'https://xyian.com/',
         technologies: [
             'Next.js 15',
@@ -34,7 +34,7 @@ export const PROJECT_LIST: ProjectModel[] = [
         description: 'XYIAN Software Example Fitness application',
         longDetails:
             'A comprehensive fitness tracking application designed to help users achieve their health goals. Features workout planning, progress tracking, nutrition logging, and social features for community engagement.',
-        imgSrc: 'https://github.com/XYIANSoftware/images/blob/main/projects/coming%20soon%20square.png?raw=true', //use one from logo?
+        imgSrc: '/svg-logos/XYIAN_g1.svg',
         url: 'https://xyian.com/',
         technologies: [
             'React Native',
@@ -60,7 +60,7 @@ export const PROJECT_LIST: ProjectModel[] = [
         description: 'XYIAN Software Example for a personal portfolio.',
         longDetails:
             'A stunning personal portfolio template showcasing creative work, skills, and achievements. Features smooth animations, interactive elements, and a modern design that adapts to different content types.',
-        imgSrc: 'https://raw.githubusercontent.com/XYIANSoftware/images/refs/heads/main/logos_XYIAN/352071BE-C25D-419E-AC0F-6D25A28DF4F3.webp', //use one from logo?
+        imgSrc: '/svg-logos/XYIAN_g2.svg',
         url: 'https://xyian.com/',
         technologies: [
             'Next.js',
@@ -86,7 +86,7 @@ export const PROJECT_LIST: ProjectModel[] = [
         description: 'XYIAN Software Photography / art portfolio Example',
         longDetails:
             'A beautiful photography and art portfolio platform designed to showcase visual work in the best possible way. Features high-resolution image galleries, lightbox viewing, and e-commerce integration.',
-        imgSrc: 'https://github.com/XYIANSoftware/images/blob/main/projects/coming%20soon%20square.png?raw=true', //use one from logo?
+        imgSrc: '/svg-logos/XYIAN_g3.svg',
         url: 'https://xyian.com/',
         technologies: ['Vue.js', 'Nuxt.js', 'Stripe', 'Cloudinary', 'Vuex'],
         features: [
@@ -106,7 +106,7 @@ export const PROJECT_LIST: ProjectModel[] = [
         description: 'XYIAN Software basic AI integration Example',
         longDetails:
             'An innovative AI-powered application demonstrating the integration of machine learning and artificial intelligence in modern web applications. Features natural language processing, image recognition, and predictive analytics.',
-        imgSrc: 'https://raw.githubusercontent.com/XYIANSoftware/images/refs/heads/main/logos_XYIAN/0FFFF9EB-A62A-44FB-87EA-8D21A33D2E01.webp', //use one from logo?
+        imgSrc: '/svg-logos/XYIAN_g4.svg',
         url: 'https://xyian.com/',
         technologies: [
             'Python',
@@ -133,7 +133,7 @@ export const PROJECT_LIST: ProjectModel[] = [
             'Business Portfolio and Booking system for a mobile salon business.',
         longDetails:
             'A comprehensive booking and portfolio system for a mobile salon business. Features appointment scheduling, service catalog, customer management, and payment processing. Designed to streamline operations and enhance customer experience.',
-        imgSrc: 'https://github.com/XYIANSoftware/images/blob/main/projects/Looks%20Delivered.png?raw=true', //use one from logo?
+        imgSrc: '/svg-logos/XYIAN_g5.svg',
         url: 'https://looksdelivered.com/',
         technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe'],
         features: [
@@ -154,7 +154,7 @@ export const PROJECT_LIST: ProjectModel[] = [
             'Basic personal site for things like job applications, freelancing, blogging etc.',
         longDetails:
             'A clean and professional personal portfolio website designed for job applications, freelancing, and personal branding. Features a blog system, project showcase, and contact integration.',
-        imgSrc: 'https://github.com/XYIANSoftware/images/blob/main/kxd_logos/KXD-Logo2.png?raw=true', //use one from logo?
+        imgSrc: '/svg-logos/XYIAN_cyan.svg',
         url: 'https://kyledilbeck.com/',
         technologies: [
             'Next.js',
@@ -180,7 +180,7 @@ export const PROJECT_LIST: ProjectModel[] = [
         description: 'Basic company site without functions',
         longDetails:
             'A professional company website showcasing business services, team, and company information. Features a clean design, contact information, and service descriptions.',
-        imgSrc: 'https://github.com/XYIANSoftware/images/blob/main/projects/D_logo.png?raw=true', //use one from logo?
+        imgSrc: '/svg-logos/XYIAN_Secondary.svg',
         url: 'https://dilbeckandsons.com/',
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'jQuery'],
         features: [

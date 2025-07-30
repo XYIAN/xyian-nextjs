@@ -1,6 +1,6 @@
 {
-    "name": "first-next-proj",
-    "version": "4.3.0",
+    "name": "xyian-nextjs",
+    "version": "0.0.1",
     "private": true,
     "scripts": {
         "dev": "next dev -H 0.0.0.0 -p 3003",

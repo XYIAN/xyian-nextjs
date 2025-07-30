@@ -7,14 +7,14 @@ export const MENU_LINKS: MenuItem[] = [
         route: 'team',
     },
     {
-        label: 'Project Gallery',
-        route: 'projectGallery',
-    },
-    {
         label: 'About XYS',
         route: 'about',
     },
     { label: 'Client Login', route: 'login' },
+    {
+        label: 'Project Gallery',
+        route: 'projectGallery',
+    },
     {
         label: 'Privacy & Terms',
         route: 'privacy',
