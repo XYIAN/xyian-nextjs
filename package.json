@@ -13,12 +13,15 @@
         "@fortawesome/free-brands-svg-icons": "^6.6.0",
         "@fortawesome/free-regular-svg-icons": "^6.6.0",
         "@fortawesome/react-fontawesome": "^0.2.2",
+        "@stripe/stripe-js": "^5.5.0",
         "@svgr/webpack": "^8.1.0",
         "axios": "^1.7.9",
+        "body-parser": "^1.20.3",
         "core-js": "^3.35.0",
         "express": "^4.21.2",
         "font-awesome": "^4.7.0",
         "next": "^15.1.2",
+        "next-connect": "^1.0.0",
         "next-images": "^1.8.5",
         "npm": "^10.9.1",
         "primefaces": "^13.0.0",
@@ -32,7 +35,8 @@
         "react-refresh": "^0.14.0",
         "react-transition-group": "^4.4.5",
         "sass": "^1.69.7",
-        "sharp": "^0.33.4"
+        "sharp": "^0.33.4",
+        "stripe": "^17.5.0"
     },
     "devDependencies": {
         "@types/node": "^20",

@@ -19,4 +19,8 @@ export const MENU_LINKS: MenuItem[] = [
         label: 'Privacy & Terms',
         route: 'privacy',
     },
+    {
+        label: 'Store',
+        route: 'store',
+    },
 ];
