@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.0.1] - 2026-05-02
+
+### Changed
+
+-   **Git**: Fast-forward merged `facelift` into `main` so the default branch matches the modernized app stack.
+-   **Dependencies**: Ran `npm update` to refresh the lockfile within existing semver ranges. Installed **Next.js 16.2.4** and **React 19.2.5** (was 16.1.6 / 19.2.4 in lockfile). Raised declared `next` and `eslint-config-next` ranges in `package.json` to `^16.2.4`.
+
 ## [5.0.0] - 2026-02-28
 
 ### Major Upgrades
