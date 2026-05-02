@@ -5,7 +5,7 @@ interface LoadMaskProps {
     loading: boolean;
     text?: string;
 }
-const LoadMask = ({ loading }: LoadMaskProps) => {
+export const LoadMask = ({ loading }: LoadMaskProps) => {
     return (
         <>
             {loading && (
@@ -16,5 +16,3 @@ const LoadMask = ({ loading }: LoadMaskProps) => {
         </>
     );
 };
-
-export default LoadMask;

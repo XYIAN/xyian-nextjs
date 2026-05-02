@@ -21,5 +21,3 @@ export const BackToHome = ({ label }: BackToHomeProps) => {
         />
     );
 };
-
-export default BackToHome;

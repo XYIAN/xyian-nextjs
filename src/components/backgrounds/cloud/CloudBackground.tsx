@@ -4,7 +4,7 @@ interface CloudBackgroundProps {
     children?: ReactNode;
 }
 
-const CloudBackground: React.FC<CloudBackgroundProps> = ({ children }) => {
+const CloudBackground = ({ children }: CloudBackgroundProps) => {
     return (
         <div className='cloud-wrapper'>
             <div className='center fixed-background'>{children}</div>

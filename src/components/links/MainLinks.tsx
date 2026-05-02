@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faGithub,
     faInstagram,
     faLinkedin,
     faXTwitter,
@@ -50,23 +49,6 @@ export const MainLinks = ({ className }: MainLinksProps) => {
                             />
                         </a>
                     </li>
-                    {/* <li>
-                        <a
-                            className='github'
-                            href='https://github.com/XYIAN'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                        >
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <FontAwesomeIcon
-                                className='iconLogoSizes'
-                                icon={faGithub}
-                            />
-                        </a>
-                    </li> */}
                     <li>
                         <a
                             className='instagram'

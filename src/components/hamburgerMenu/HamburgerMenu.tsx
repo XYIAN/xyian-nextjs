@@ -2,33 +2,13 @@
 import { Button } from 'primereact/button';
 import { Sidebar } from 'primereact/sidebar';
 import { useState } from 'react';
-// import LoadMask from '../LoadMask';
 import SVGBackground from '../backgrounds/svg/SVGBackground';
-// import { usePathname, useSearchParams } from 'next/navigation';
 import { HamburgerMenuList } from './HamburgerMenuList';
 
 export const HamburgerMenu = () => {
     const [visible, setVisible] = useState(false);
-    // const [loading, setLoading] = useState(false);
-    // const pathname = usePathname();
-    // const searchParams = useSearchParams();
 
     const closeMenu = () => setVisible(false);
-
-    // useEffect(() => {
-    //     function removeLoadMask() {
-    //         setLoading(false);
-    //     }
-    //     setLoading(true);
-    //     if (document.readyState === 'complete') {
-    //         setLoading(false);
-    //     } else {
-    //         window.addEventListener('load', removeLoadMask);
-    //     }
-    //     return () => {
-    //         window.removeEventListener('load', removeLoadMask);
-    //     };
-    // }, [pathname, searchParams]);
 
     return (
         <>
@@ -51,7 +31,6 @@ export const HamburgerMenu = () => {
                 }}
             />
             <Sidebar
-                //header={SideBarHeader}
                 visible={visible}
                 onHide={() => setVisible(false)}
                 position='right'
@@ -65,7 +44,6 @@ export const HamburgerMenu = () => {
             >
                 <SVGBackground />
                 <HamburgerMenuList closeMenu={closeMenu} />
-                {/* <LoadMask loading={loading} /> */}
             </Sidebar>
         </>
     );

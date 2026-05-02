@@ -7,7 +7,7 @@ import { Dropdown } from 'primereact/dropdown';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { FloatLabel } from 'primereact/floatlabel';
-import { Panel } from 'primereact/panel';
+import { Panel, PanelHeaderTemplateOptions } from 'primereact/panel';
 
 /**
  * ProjectGrid component displays a responsive, animated grid of ProjectCard components.
@@ -87,7 +87,7 @@ const ProjectGrid = () => {
         setSelectedStatus(null);
     };
 
-    const headerTemplate = (options: any) => {
+    const headerTemplate = (options: PanelHeaderTemplateOptions) => {
         const className = `${options.className} justify-content-space-between`;
 
         return (

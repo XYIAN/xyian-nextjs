@@ -22,7 +22,7 @@ We specialize in developing custom software solutions including:
 
 ### Modern Technology Stack
 
--   **Next.js 15** - Latest React framework for optimal performance
+-   **Next.js 16** - Latest React framework with Turbopack for optimal performance
 -   **TypeScript** - Type-safe development for reliable code
 -   **PrimeReact** - Professional UI components and design system
 -   **Responsive Design** - Mobile-first approach for all devices

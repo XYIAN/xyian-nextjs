@@ -1,6 +1,6 @@
 'use client';
 import { Button, ButtonProps } from 'primereact/button';
-import React, { useState } from 'react';
+import React, { useMemo } from 'react';
 
 export type XYButtonColor =
     | undefined
@@ -9,30 +9,26 @@ export type XYButtonColor =
     | 'black'
     | 'cyan'
     | 'whiteBlack';
+
 export interface XYButtonProps extends ButtonProps {
     xyType?: XYButtonColor;
-    // xyAnimate?: boolean;
 }
 
 const XYButton = ({ xyType, ...other }: XYButtonProps) => {
-    //?class type changes the scss imports used
-    const [classType, setClassType] = useState<XYButtonColor | undefined>();
-    //?style is the pt override
-    const determineStyle = (): React.CSSProperties | undefined => {
+    const classType = useMemo((): XYButtonColor | undefined => {
         switch (xyType) {
             case 'transparentWhite':
-                if (classType !== 'transparentWhite')
-                    setClassType('transparentWhite');
-                return other?.style;
             case 'white':
-                if (classType !== 'white') setClassType('white');
-                return {
-                    // backgroundColor: 'white',
-                    // color: 'black',
-                    ...other?.style,
-                };
             case 'whiteBlack':
-                if (classType !== 'whiteBlack') setClassType('whiteBlack');
+                return xyType;
+            default:
+                return undefined;
+        }
+    }, [xyType]);
+
+    const computedStyle = useMemo((): React.CSSProperties | undefined => {
+        switch (xyType) {
+            case 'whiteBlack':
                 return {
                     backgroundColor: 'white',
                     color: 'black',
@@ -41,13 +37,13 @@ const XYButton = ({ xyType, ...other }: XYButtonProps) => {
             default:
                 return other?.style;
         }
-    };
+    }, [xyType, other?.style]);
 
     return (
         <Button
             {...other}
-            style={determineStyle()}
-            className={`${classType} ${other.className} p-1 gap-1`}
+            style={computedStyle}
+            className={`${classType ?? ''} ${other.className ?? ''} p-1 gap-1`}
         />
     );
 };

@@ -1,13 +1,10 @@
 /** @type {import('next').NextConfig} */
-// const withImages = require('next-images');
 module.exports = {
-    // Production optimizations
-    output: 'standalone', // Optimized for Netlify
-    compress: true, // Enable gzip compression
-    poweredByHeader: false, // Remove X-Powered-By header for security
-    generateEtags: false, // Disable etags for better caching
+    output: 'standalone',
+    compress: true,
+    poweredByHeader: false,
+    generateEtags: false,
 
-    // Image optimization
     images: {
         remotePatterns: [
             {
@@ -29,28 +26,31 @@ module.exports = {
                 pathname: '/XYIAN/headshots/**',
             },
         ],
-        // Optimize images for production
         formats: ['image/webp', 'image/avif'],
-        minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
+        minimumCacheTTL: 60 * 60 * 24 * 30,
     },
 
-    // SCSS optimization
     sassOptions: {
         includePaths: ['./src/styles'],
-        outputStyle: 'compressed', // Minify SCSS in production
+        outputStyle: 'compressed',
     },
 
-    // Webpack optimizations
+    turbopack: {
+        rules: {
+            '*.svg': {
+                loaders: ['@svgr/webpack'],
+                as: '*.js',
+            },
+        },
+    },
+
     webpack(config, { dev, isServer }) {
-        // SVG handling
         config.module.rules.push({
             test: /\.svg$/,
             use: ['@svgr/webpack'],
         });
 
-        // Production optimizations
         if (!dev && !isServer) {
-            // Optimize bundle splitting
             config.optimization.splitChunks = {
                 chunks: 'all',
                 cacheGroups: {
@@ -72,13 +72,10 @@ module.exports = {
         return config;
     },
 
-    // Experimental features for better performance
     experimental: {
-        optimizeCss: true, // Optimize CSS
-        scrollRestoration: true, // Better scroll restoration
+        scrollRestoration: true,
     },
 
-    // Headers for security and caching
     async headers() {
         return [
             {

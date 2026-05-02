@@ -40,46 +40,4 @@ export const STORE_ITEMS: Item[] = [
         priceId: '',
         subTitle: `This shirt won't write code for you, but it'll make you look like you've already IPO'd.`,
     },
-    // {
-    //     id: 4,
-    //     name: 'Cotton Graphic T-Shirt',
-    //     price: 24.99,
-    //     imageUrl:
-    //         'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
-    //     description: 'Soft and breathable cotton t-shirt with a trendy design.',
-    //     longDescription:
-    //         'Made from 100% premium cotton, this graphic t-shirt combines style and comfort. Available in multiple colors and sizes, itÃƒÂ¢Â¢s perfect for casual outings.',
-    //     quantity: 0,
-    //     priceId: '',
-    //     subTitle: '',
-    // },
-    // {
-    //     id: 5,
-    //     name: 'Stainless Steel Water Bottle',
-    //     price: 19.99,
-    //     imageUrl:
-    //         'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
-    //     description:
-    //         'Insulated water bottle that keeps drinks hot or cold for hours.',
-    //     longDescription:
-    //         'This stainless steel water bottle features double-wall insulation to maintain temperature for extended periods. Its sleek design makes it ideal for travel, gym, or office use.',
-    //     quantity: 0,
-    //     priceId: '',
-    //     subTitle: '',
-    // },
-    // {
-    //     id: 6,
-    //     name: 'Running Shoes',
-    //     price: 79.99,
-    //     imageUrl:
-    //         'https://github.com/XYIANSoftware/images/blob/main/logos_XYIAN/Primary.png?raw=true',
-    //     description:
-    //         'Lightweight and durable running shoes designed for comfort.',
-    //     longDescription:
-    //         'These running shoes are crafted with breathable mesh material and cushioned soles to enhance performance and reduce fatigue. Perfect for both beginners and seasoned runners.',
-    //     size: 'x-large',
-    //     quantity: 0,
-    //     priceId: '',
-    //     subTitle: '',
-    // },
 ];
