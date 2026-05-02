@@ -3,9 +3,7 @@ import { NextPage } from 'next';
 import OurTeam from './components/OurTeam';
 import { XYSToTop } from '@/components';
 
-interface Props {}
-
-const Team: NextPage<Props> = ({}) => {
+const Team: NextPage = () => {
     return (
         <main>
             <div className='flex justify-content-center pt-8 flex-column'>

@@ -37,7 +37,7 @@ const XYButton = ({ xyType, ...other }: XYButtonProps) => {
             default:
                 return other?.style;
         }
-    }, [xyType, other?.style]);
+    }, [xyType, other.style]);
 
     return (
         <Button

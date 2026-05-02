@@ -6,9 +6,7 @@ import AboutUsDynamic from './components/AboutUsDynamic';
 import AboutUsTitle from './components/AboutUsTitle';
 import AboutFooter from './components/AboutFooter';
 
-interface Props {}
-
-const AboutXYS: NextPage<Props> = ({}) => {
+const AboutXYS: NextPage = () => {
     return (
         <div className='flex flex-column'>
             <AboutUsTitle />

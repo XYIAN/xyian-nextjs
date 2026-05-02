@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   **Git**: Fast-forward merged `facelift` into `main` so the default branch matches the modernized app stack.
 -   **Dependencies**: Ran `npm update` to refresh the lockfile within existing semver ranges. Installed **Next.js 16.2.4** and **React 19.2.5** (was 16.1.6 / 19.2.4 in lockfile). Raised declared `next` and `eslint-config-next` ranges in `package.json` to `^16.2.4`.
+-   **ESLint (Next.js 16)**: `next lint` was removed in Next.js 16; the `lint` script now runs `eslint .`. Migrated `eslint.config.mjs` to flat config using `eslint/config` plus `eslint-config-next/core-web-vitals` and `typescript` entrypoints (dropped `@eslint/eslintrc` / `FlatCompat`). Pinned **ESLint 9.x** for compatibility with `eslint-plugin-react` bundled by `eslint-config-next`. Ignored `public/**/*.tsx` (non-source assets) and disabled `@typescript-eslint/no-require-imports` for `server/**/*.js`. Several `react-hooks/*` compiler rules are set to **warn** until refactors land.
+-   **Lint fixes**: Removed empty `Props` interfaces on About and Team pages; aligned `XYButton` `useMemo` dependency array with React Compiler expectations (`other.style`).
 
 ## [5.0.0] - 2026-02-28
 
