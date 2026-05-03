@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.0.0] - 2026-05-02
+
+### Major dependency upgrades
+
+-   **Font Awesome** 6.x → **7.2.x** (`@fortawesome/fontawesome-free`, `free-brands-svg-icons`, `free-regular-svg-icons`); **`@fortawesome/react-fontawesome`** **0.2.x → 3.3.x** (supported with FA 6/7 per package peers).
+-   **PrimeFlex** **3.x → 4.x** (utility CSS; existing `primeflex/primeflex.css` import remains valid).
+-   **TypeScript** **5.x → 6.x**.
+-   **`@types/node`** **24.x → 25.x**.
+
+### Patch / minor bumps
+
+-   **React** / **React DOM** **19.2.5**; **axios** **1.16.x**; **react-hook-form** **7.75.x**; **sass** **1.99.x**.
+
+### Unchanged (already latest stable)
+
+-   **Next.js** **16.2.4**, **eslint-config-next** **16.2.4**, **PrimeReact** **10.9.7**, **sharp** **0.34.5**, **@svgr/webpack** **8.1.0** — current npm `latest` tags match these lines.
+
+### Tooling note
+
+-   **ESLint** remains **9.39.x** (not ESLint 10): `eslint-config-next@16.2.4` still bundles `eslint-plugin-react` rules that crash on ESLint 10 (`getFilename`). Revisit when a newer `eslint-config-next` release supports ESLint 10.
+
 ## [5.0.2] - 2026-05-02
 
 ### Changed
