@@ -14,7 +14,13 @@ const NotFound = () => {
 
     return (
         <div className='pt-4 flex flex-column w-full h-full justify-items-center align-items-center gap-2'>
-            <Image src='/Primary.png' alt='Image' width={250} height={250} />
+            <Image
+                src='/svg-logos/XYIAN_Primary.svg'
+                alt='XYIAN Logo'
+                width={250}
+                height={250}
+                unoptimized
+            />
             <h2 className='pt-2'>Uh-Oh! 404 Page Not Found.</h2>
             <XYButton
                 xyType='transparentWhite'

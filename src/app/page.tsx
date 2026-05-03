@@ -16,12 +16,13 @@ export default function Home() {
                 }}
             >
                 <Image
-                    src='/Primary.png'
+                    src='/svg-logos/XYIAN_Primary.svg'
                     alt='XYIAN Logo'
                     width={250}
                     height={250}
                     className={BOTTOM_PADDING}
                     priority
+                    unoptimized
                 />
                 <h3 className={`text-center ${BOTTOM_PADDING}`}>
                     Personalized solutions at your fingertips

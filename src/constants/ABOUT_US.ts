@@ -59,7 +59,7 @@ export const ABOUT_US: AboutUsModel[] = [
         software solutions that drive results. Let's connect and see
         how we can help bring your ideas to life!`,
         title: '',
-        imageSrc: '/Primary.png',
+        imageSrc: '/svg-logos/XYIAN_Primary.svg',
     },
 ];
 export const ABOUT_US_SPLIT: AboutUsModel[] = [

@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.0.3] - 2026-05-02
+
+### Fixed
+
+-   **Images / `/_next/image` 502**: **`/Primary.png` was referenced but never existed under `public/`**, so the image optimizer failed in production (e.g. Netlify). Replaced with the in-repo asset **`/svg-logos/XYIAN_Primary.svg`** on the home page, 404 page, and the about constant entry. Set **`unoptimized`** on those `next/image` SVG logos so they are served as static files instead of going through the raster optimizer.
+
 ## [6.0.2] - 2026-05-02
 
 ### Fixed
