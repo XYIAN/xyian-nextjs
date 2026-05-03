@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.0.2] - 2026-05-02
+
+### Fixed
+
+-   **Netlify build**: Removed **`NODE_ENV = "production"`** from `[context.*.environment]` in `netlify.toml`. That variable was applied before `npm install`, so npm skipped **devDependencies** and **`@types/node`** / **TypeScript** were missing, causing `next build` to fail with “Please install @types/node”. Next.js still builds an optimized production bundle without forcing `NODE_ENV` in site config for the install phase.
+
+### Security
+
+-   **`npm audit` (0 findings)**: Next.js 16.2.4 still declares **postcss** `8.4.31`, which is below **8.5.10** (moderate [GHSA-qx2v-qp2m-jg93](https://github.com/advisories/GHSA-qx2v-qp2m-jg93)). Added an **`overrides.postcss`** pin to **8.5.13** so the install tree matches the patched release without waiting on a Next semver bump. Revisit when `next` ships a dependency bump and `npm audit` stays clean without the override.
+
 ## [6.0.1] - 2026-05-02
 
 ### Fixed

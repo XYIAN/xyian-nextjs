@@ -66,12 +66,6 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
 
-# Environment variables (if needed)
-[context.production.environment]
-  NODE_ENV = "production"
-
-[context.deploy-preview.environment]
-  NODE_ENV = "production"
-
-[context.branch-deploy.environment]
-  NODE_ENV = "production" 
+# Do not set NODE_ENV=production here: Netlify applies these env vars before
+# `npm install`, and npm omits devDependencies when NODE_ENV is production,
+# which breaks `next build` (TypeScript needs @types/* and typescript in devDependencies).
